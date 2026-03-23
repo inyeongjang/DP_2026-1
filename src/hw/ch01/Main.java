@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("학번 : 20230918,  이름 : 장인영");
+        System.out.println("학번 : 20230918,  이름 : 장인영\n");
 
         BookShelf bookShelf = new BookShelf(10);
         
@@ -34,7 +34,9 @@ public class Main {
         System.out.println("\n=== 출판연도 순서의 책 목록 ===");
         while(it_year.hasNext()) {
             Book book = it_year.next();
-            System.out.println(book.getName() + ", " + book.getGenre() + ", " + book.getYear() + ", " + book.getPrice());
+            if (book.getGenre().equals("소설")) {
+                System.out.println(book.getName() + ", " + book.getGenre() + ", " + book.getYear() + ", " + book.getPrice());
+            }
         }
     }
 }
