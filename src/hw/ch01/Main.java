@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("20230918 장인영");
+        System.out.println("학번 : 20230918,  이름 : 장인영");
 
         BookShelf bookShelf = new BookShelf(10);
         
