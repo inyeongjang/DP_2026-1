@@ -29,14 +29,22 @@ public class Main {
             System.out.println(book.getName() + ", " + book.getGenre() + ", " + book.getYear() + ", " + book.getPrice());
         }
 
-        // 4 - 3 : 출판연도 역순 Iterator 테스트
+        // 4 - 3 : 출판연도 역순 Iterator 테스트 (소설만)
         Iterator<Book> it_year = bookShelf.iteratorByYear();
-        System.out.println("\n=== 출판연도 순서의 책 목록 ===");
+        System.out.println("\n=== 출판연도 순서의 책 목록 (소설) ===");
         while(it_year.hasNext()) {
             Book book = it_year.next();
             if (book.getGenre().equals("소설")) {
                 System.out.println(book.getName() + ", " + book.getGenre() + ", " + book.getYear() + ", " + book.getPrice());
             }
         }
+
+        // 4 - 3 : 출판연도 역순 Iterator 테스트 (전체)
+        Iterator<Book> it_year2 = bookShelf.iteratorByYear();
+        System.out.println("\n=== 출판연도 순서의 책 목록 (전체) ===");
+        while(it_year2.hasNext()) {
+            Book book = it_year2.next();
+            System.out.println(book.getName() + ", " + book.getGenre() + ", " + book.getYear() + ", " + book.getPrice());
+        }
+        }
     }
-}
