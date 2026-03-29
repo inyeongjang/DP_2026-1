@@ -1,5 +1,7 @@
 package hw.ch02;
 
+// Charger 인터페이스를 사용하는 스마트폰 클래스 
+
 public class Smartphone {
     private Charger charger;
 
