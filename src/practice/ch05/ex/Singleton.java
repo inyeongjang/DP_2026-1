@@ -10,7 +10,7 @@ public class Singleton {
         slowdown(); // 인스턴스가 생성될 때 시간을 지연시킴 
     }
 
-    public static Singleton getInstance() {
+    public static synchronized Singleton getInstance() {
         // 여기에서 객체 생성 
         if (singleton == null) { // 처음 호출되는지 검사 
             singleton = new Singleton();
@@ -20,7 +20,7 @@ public class Singleton {
 
     private void slowdown() {
         try {
-            Thread.sleep(1000); // CPU를 내놓고 쉼 
+            Thread.sleep(1000); // CPU를 내놓고 1초 쉼 
         } catch (InterruptedException e) {
         }
     }
