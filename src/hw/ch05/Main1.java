@@ -2,6 +2,9 @@ package hw.ch05;
 
 public class Main1 {
     public static void main(String[] args) {
+
+        System.out.println("\n학번 : 20230918, 이름 : 장인영\n");
+
         System.out.println("========== 방식 1: Static Initializer ==========");
         LoggerStaticInit logger1a = LoggerStaticInit.getInstance();
         LoggerStaticInit logger1b = LoggerStaticInit.getInstance();

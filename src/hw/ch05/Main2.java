@@ -2,6 +2,9 @@ package hw.ch05;
 
 public class Main2 {
     public static void main(String[] args) {
+
+        System.out.println("\n학번 : 20230918, 이름 : 장인영\n");
+
         System.out.println("\n========== 방식 2: Synchronized Lazy ==========");
         LoggerSynchronizedLazy logger2a = LoggerSynchronizedLazy.getInstance();
         LoggerSynchronizedLazy logger2b = LoggerSynchronizedLazy.getInstance();
