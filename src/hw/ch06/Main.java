@@ -24,16 +24,16 @@ public class Main {
         Product p1 = manager.create("underline");
         p1.use("Welcome");
 
-        System.out.println("===== Test 2: MessageBox =====");
+        System.out.println("\n===== Test 2: MessageBox =====");
         Product p2 = manager.create("message");
         p2.use("Welcome");
 
-        System.out.println("===== Test 3: BorderLine =====");
+        System.out.println("\n===== Test 3: BorderLine =====");
         Product p3 = manager.create("border");
         p3.use("Welcome");
 
         // 복사 검증 
-        System.out.println("===== Clone Test =====");
+        System.out.println("\n===== Clone Test =====");
         Product p3_copy = manager.create("border");
         if (p3 != p3_copy) {
             System.out.println("✓ 정상적으로 복사됨 (서로 다른 인스턴스)");
