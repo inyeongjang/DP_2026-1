@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class ProbStrategy implements Strategy {
     private Random random;
-    private int prevHandValue = 0;
-    private int currentHandValue = 0;
+    private int prevHandValue = 0; // 이전에 낸 손의 값 
+    private int currentHandValue = 0; // 직전에 낸 손의 값
     private int[][] history = {
         { 1, 1, 1, },
         { 1, 1, 1, },
@@ -18,8 +18,9 @@ public class ProbStrategy implements Strategy {
 
     @Override
     public Hand nextHand() {
-        int bet = random.nextInt(getSum(currentHandValue));
-        int handvalue = 0;
+        int bet = random.nextInt(getSum(currentHandValue));  
+        int handvalue = 0; // 이번에 낼 손의 값 
+
         if (bet < history[currentHandValue][0]) {
             handvalue = 0;
         } else if (bet < history[currentHandValue][0] + history[currentHandValue][1]) {
@@ -27,6 +28,7 @@ public class ProbStrategy implements Strategy {
         } else {
             handvalue = 2;
         }
+
         prevHandValue = currentHandValue;
         currentHandValue = handvalue;
         return Hand.getHand(handvalue);
@@ -35,16 +37,16 @@ public class ProbStrategy implements Strategy {
     private int getSum(int handvalue) {
         int sum = 0;
         for (int i = 0; i < 3; i++) {
-            sum += history[handvalue][i];
+            sum += history[handvalue][i]; // 행 번호는 고정, 열 번호가 0, 1, 2로 바뀜 => 그 행의 값을 다 더함 
         }
         return sum;
     }
 
     @Override
     public void study(boolean win) {
-        if (win) {
+        if (win) { // 이겼으면 
             history[prevHandValue][currentHandValue]++;
-        } else {
+        } else { // 졌으면  
             history[prevHandValue][(currentHandValue + 1) % 3]++;
             history[prevHandValue][(currentHandValue + 2) % 3]++;
         }
