@@ -36,7 +36,7 @@ public abstract class Entry {
         do {
             fullname.insert(0, entry.getName());
             fullname.insert(0, "/");
-            entry = entry.parent; // 부모로 이동한다. (트리의 윗 방향으로 이동)
+            entry = entry.parent; // 부모로 이동한다. (트리의 윗 방향으로 이동`)
         } while (entry != null);
 
         return fullname.toString();
