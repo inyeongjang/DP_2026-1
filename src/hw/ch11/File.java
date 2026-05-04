@@ -12,6 +12,7 @@ public class File extends Entry {
         this.size = size;
     }
 
+    // search() 메서드 구현  
     @Override
     public List<Entry> search(String keyword) {
         List<Entry> results = new ArrayList<>();

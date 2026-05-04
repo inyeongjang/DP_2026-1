@@ -11,9 +11,13 @@ public class Directory extends Entry {
         this.name = name;
     }
 
+    // search() 메서드 구현  
     @Override
     public List<Entry> search(String keyword) {
         List<Entry> results = new ArrayList<>();
+        if (getName().contains(keyword)) {
+            results.add(this);
+        }
         for (Entry entry : directory) {
             results.addAll(entry.search(keyword));
         }
