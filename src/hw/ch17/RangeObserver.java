@@ -1,6 +1,7 @@
 package hw.ch17;
 
 public class RangeObserver implements Observer{
+    @Override
     public void update(NumberGenerator generator) {
         int number = generator.getNumber();
         if (number < 10) {
