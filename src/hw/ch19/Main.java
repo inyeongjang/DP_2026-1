@@ -2,6 +2,8 @@ package hw.ch19;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("\n학번 : 20230918, 이름 : 장인영\n");
+
         SafeFrame frame = new SafeFrame("State Sample");
         while (true) {
             for (int hour = 0; hour < 24; hour++) {
