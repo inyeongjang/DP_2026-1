@@ -33,7 +33,7 @@ public class ClosingState implements State {
 
     @Override
     public void doPhone(Context context) {
-        context.callSecurityCenter("퇴근 확인 통화(마감)");
+        context.recordLog("퇴근 확인 통화(마감)");
     }
 
     @Override
